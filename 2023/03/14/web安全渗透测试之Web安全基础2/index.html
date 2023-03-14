@@ -1,0 +1,76 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>web安全渗透测试之Web安全基础2 | Kiber'sblog</title><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"Enter here","blurHolder":"Search the blog","noResult":"Data \"$0\" not found"},"code":{"codeInfo":"$0 - $1 lines","copy":"copy","copyFinish":"copied","expand":"expand"}}</script><script src="//unpkg.com/mermaid@9.2.2/dist/mermaid.min.js"></script><script>mermaid.initialize({
+ startOnLoad: true
+ , theme: 'dark'
+});</script><link rel="stylesheet" href="/css/arknights.css"><link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/atom-one-dark-reasonable.min.css"><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.ttf");
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body style="background-image:url(https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg);"><main><header class="closed"><nav><div class="navBtn hide"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><ol class="navContent"><li class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="Search the blog" spellcheck="false" maxlength="50" type="text" id="search-input"></span></li><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li></ol></nav><div class="search-popup"><div id="search-result"></div></div></header><article><div id="post-bg"><div id="post-title"><h1>web安全渗透测试之Web安全基础2</h1><div id="post-info"><span>First Post: <div class="control"><time datetime="2023-03-14T04:38:54.000Z" id="date"> 2023-03-14</time></div></span><br><span>Last Update: <div class="control"><time datetime="2023-03-14T04:40:54.896Z" id="updated"> 2023-03-14</time></div></span></div></div><hr><div id="post-content"><h2 id="CSS入门"><a href="#CSS入门" class="headerlink" title="CSS入门"></a>CSS入门</h2><p>层叠样式表（英文全称：Cascading Style Sheets）是一种用来表现HTML（标准通用标记语言的一个应用）或XML（标准通用标记语言的一个子集）等文件样式的计算机语言。CSS 能够对网页中元素位置的排版进行像素级精确控制，支持几乎所有的字体字号样式，拥有对网页对象和模型样式编辑的能力。</p>
+<h2 id="JavaScript-入门"><a href="#JavaScript-入门" class="headerlink" title="JavaScript 入门"></a>JavaScript 入门</h2><p>JavaScript，是可插入 HTML 页面，可以由绝大多数现代浏览器执行的轻量级的编程语言。JavaScript 基于原型编程、多范式的动态脚本语言，并且支持面向对象、命令式和声明式（如函数式编程）风格。</p>
+<h3 id="引发的漏洞"><a href="#引发的漏洞" class="headerlink" title="引发的漏洞"></a>引发的漏洞</h3><p>XSS 攻击，文件上传漏洞，常年占据 OWASP Top10。</p>
+<h2 id="Web-App"><a href="#Web-App" class="headerlink" title="Web App"></a>Web App</h2><p>Web App（或Web应用程序）运行于网络和标准浏览器上，基于网页技术开发实现特定功能的应用。</p>
+<p>前端：HTML，CSS，JavaScript</p>
+<p>后端：Java，Python，PHP</p>
+<p>数据库：MySQL，Oracle，MongoDB</p>
+<p>容器：Windows(IIS)，Linux(Nginx, Apache)</p>
+<p>协议：TCP，DNS，HTTP，HTTPS</p>
+<h3 id="常见的-Web-服务器"><a href="#常见的-Web-服务器" class="headerlink" title="常见的 Web 服务器"></a>常见的 Web 服务器</h3><p>Apache HTTP Server（简称Apache）是Apache软件基金会的一个开放源代码的网页服务器软件，可以在大多数电脑操作系统中运行，由于其跨平台和安全性被广泛使用，是最流行的Web服务器软件之一。</p>
+<p>Nginx（发音同engine x）是一个网页服务器，它能反向代理HTTP, HTTPS, SMTP, POP3, IMAP的协议链接，以及一个负载均衡器和一个HTTP缓存。Nginx是一款面向性能设计的HTTP服务器，相较于Apache、lighttpd具有占有内存少，稳定性高等优势。</p>
+<p>IIS是Internet Information Server的缩写。它是微软公司主推的服务器。</p>
+<p>Lighttpd是一个德国人领导的开源Web服务器软件,具有非常低的内存开销、CPU占用率低、效能好以及丰富的模块等特点。</p>
+<p>Tomcat是Apache软件基金会的Jakarta项目中的一个核心项目，由Apache、Sun和其他一些公司及个人共同开发而成。Tomcat技术先进、性能稳定，而且免费，因而深受Java爱好者的喜爱并得到了部分软件开发商的认可，成为目前比较流行的Web应用服务器。</p>
+<h2 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h2><p>Web应用框架（Web application framework）是一种开发框架，用来支持动态网站、网络应用程序及网络服务</p>
+<p>的开发。其类型有基于请求的和基于组件的两种框架。有助于减轻网页开发时共通性活动的工作负荷，例如许多</p>
+<p>框架提供数据库访问接口、标准样板以及会话管理等，可提升代码的可再用性。</p>
+<h4 id="前端框架"><a href="#前端框架" class="headerlink" title="前端框架"></a>前端框架</h4><p>jQuery  Bootstrap  React.js  Vue.js</p>
+<h4 id="后端框架"><a href="#后端框架" class="headerlink" title="后端框架"></a>后端框架</h4><p>Spring MVC  Django  Flask  Tornado</p>
+<h2 id="协议基础"><a href="#协议基础" class="headerlink" title="协议基础"></a>协议基础</h2><p>HTTP协议定义了Web客户端如何从Web服务器请求Web页面，以及服务器如何把Web页面传送给客户端。</p>
+<h3 id="HTTP协议工作流程"><a href="#HTTP协议工作流程" class="headerlink" title="HTTP协议工作流程"></a>HTTP协议工作流程</h3><p>•客户端连接到Web服务器</p>
+<p>一个HTTP客户端，通常是浏览器，与Web服务器的HTTP端口（默认为80）建立一个TCP套接字连接。</p>
+<p>• 发送HTTP请求</p>
+<p>通过TCP套接字，客户端向Web服务器发送一个文本的请求报文，一个请求报文由请求行、请求头部、空行和请求数据 4部分组成。</p>
+<p>• 服务器接受请求并返回HTTP响应</p>
+<p>Web服务器解析请求，定位请求资源。服务器将资源复本写到TCP套接字，由客户端读取。一个响应由状态行、响应头部、空行（请求空行）和响应数据（请求体）4部分组成。</p>
+<p>• 释放连接TCP连接</p>
+<p>若connection 模式为close，则服务器主动关闭TCP连接，客户端被动关闭连接，释放TCP连接。</p>
+<p>若connection 模式为keepalive，则该连接会保持一段时间，在该时间内可以继续接收请求。</p>
+<p>• 客户端浏览器解析HTML内容</p>
+<h3 id="HTTP协议-–-GET-vs-POST"><a href="#HTTP协议-–-GET-vs-POST" class="headerlink" title="HTTP协议 – GET vs POST"></a>HTTP协议 – GET vs POST</h3><p>•从参数的传递方面来看,GET请求的参数是直接拼接在地址栏URL的后面,而POST请求的参数是放到请求体里面的。</p>
+<p>•从长度限制方面来看,GET请求有具体的长度限制,一般不超过1024KB,而POST理论上没有,但是浏览器一般有个界限。</p>
+<p>•从安全方面来看,GET请求相较于POST,因为数据都是明文显示在URL上面的,所以安全和私密性不如POST。从本质上来说，GET和POST都是TCP连接，并无实质的区别。但是由于HTTP&#x2F;浏览器的限定，导致它们在应用过程中体现出了一些不同。GET产生一个数据包，POST产生两个数据包。对于GET请求，浏览器会把</p>
+<p>http header 和 data 一并发出去,服务器响应200(返回数据)。而对于POST，浏览器先发送header，服务器响应100 continue，浏览器再发送data，服务器响应200 ok。</p>
+<h3 id="HTTP请求响应代码"><a href="#HTTP请求响应代码" class="headerlink" title="HTTP请求响应代码"></a>HTTP请求响应代码</h3><h4 id="HTTP-状态码分类"><a href="#HTTP-状态码分类" class="headerlink" title="HTTP 状态码分类"></a>HTTP 状态码分类</h4><table>
+<thead>
+<tr>
+<th>1**</th>
+<th>信息，服务器收到请求，需要请求者继续执行操作</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2**</td>
+<td>成功，操作被成功接收并处理</td>
+</tr>
+<tr>
+<td>3**</td>
+<td>重定向，需要进一步的操作以完成请求</td>
+</tr>
+<tr>
+<td>4**</td>
+<td>客户端错误，请求包含语法错误或无法完成请求</td>
+</tr>
+<tr>
+<td>5**</td>
+<td>服务器错误，服务器在处理请求的过程中发生了错误</td>
+</tr>
+</tbody></table>
+<h4 id="常见的-HTTP-状态码："><a href="#常见的-HTTP-状态码：" class="headerlink" title="常见的 HTTP 状态码："></a>常见的 HTTP 状态码：</h4><ul>
+<li>200 - 请求成功</li>
+<li>301 - 资源（网页等）被永久转移到其它URL</li>
+<li>404 - 请求的资源（网页等）不存在</li>
+<li>500 - 内部服务器错误</li>
+</ul>
+<h2 id="Web安全攻防要点"><a href="#Web安全攻防要点" class="headerlink" title="Web安全攻防要点"></a>Web安全攻防要点</h2><p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230310085907950.png" alt="image-20230310085907950"></p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages" style="justify-content: flex-end"><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2023/03/14/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E5%B8%B8%E7%94%A8%E4%B8%93%E4%B8%9A%E6%9C%AF%E8%AF%AD%E4%B9%8B%E9%98%B2%E5%AE%88%E7%AF%87/">渗透测试常用专业术语之防守篇 Prev →</a></div></div></div></div><div id="bottom-btn"><a id="to-index" href="#toc-div" title="Catalog">≡</a><a id="to-top" onClick="scrolls.scrolltop();" title="to top" style="opacity: 0; display: none;">∧</a></div></article><aside><div id="aside-top"><div id="about"><a href="/" id="logo"><img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="Logo"></a><h1 id="Dr"><a href="/">Kiber</a></h1><div id="description"><p></p></div></div><div id="aside-block"><div id="toc-div"><h1>Catalog</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS%E5%85%A5%E9%97%A8"><span class="toc-number">1.</span> <span class="toc-text">CSS入门</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript-%E5%85%A5%E9%97%A8"><span class="toc-number">2.</span> <span class="toc-text">JavaScript 入门</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E5%8F%91%E7%9A%84%E6%BC%8F%E6%B4%9E"><span class="toc-number">2.1.</span> <span class="toc-text">引发的漏洞</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Web-App"><span class="toc-number">3.</span> <span class="toc-text">Web App</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84-Web-%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">3.1.</span> <span class="toc-text">常见的 Web 服务器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A1%86%E6%9E%B6"><span class="toc-number">4.</span> <span class="toc-text">框架</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6"><span class="toc-number">4.0.1.</span> <span class="toc-text">前端框架</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6"><span class="toc-number">4.0.2.</span> <span class="toc-text">后端框架</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80"><span class="toc-number">5.</span> <span class="toc-text">协议基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP%E5%8D%8F%E8%AE%AE%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="toc-number">5.1.</span> <span class="toc-text">HTTP协议工作流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP%E5%8D%8F%E8%AE%AE-%E2%80%93-GET-vs-POST"><span class="toc-number">5.2.</span> <span class="toc-text">HTTP协议 – GET vs POST</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP%E8%AF%B7%E6%B1%82%E5%93%8D%E5%BA%94%E4%BB%A3%E7%A0%81"><span class="toc-number">5.3.</span> <span class="toc-text">HTTP请求响应代码</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#HTTP-%E7%8A%B6%E6%80%81%E7%A0%81%E5%88%86%E7%B1%BB"><span class="toc-number">5.3.1.</span> <span class="toc-text">HTTP 状态码分类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84-HTTP-%E7%8A%B6%E6%80%81%E7%A0%81%EF%BC%9A"><span class="toc-number">5.3.2.</span> <span class="toc-text">常见的 HTTP 状态码：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Web%E5%AE%89%E5%85%A8%E6%94%BB%E9%98%B2%E8%A6%81%E7%82%B9"><span class="toc-number">6.</span> <span class="toc-text">Web安全攻防要点</span></a></li></ol></div></div></div><footer><nobr>Published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr>by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script class="pjax-js">reset=_=>{code.findCode();mermaid.init(undefined, ('.mermaid'));}</script><script src="/js/arknights.js"></script><script>window.addEventListener("load",()=>{reset()})</script></body></html>
