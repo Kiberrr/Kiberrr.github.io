@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>TOP10漏洞 | Kiber'sblog</title><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"键入以继续","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - 共 $1 行","copy":"复制","copyFinish":"复制成功","expand":"展开"}}</script><script src="//unpkg.com/mermaid@9.2.2/dist/mermaid.min.js"></script><script>mermaid.initialize({
+ startOnLoad: true
+ , theme: 'dark'
+});</script><link rel="stylesheet" href="/css/arknights.css"><link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/atom-one-dark-reasonable.min.css"><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.ttf");
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body style="background-image:url(https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg);"><main><header class="closed"><nav><div class="navBtn hide"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><ol class="navContent"><li class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></li><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li></ol></nav><div class="search-popup"><div id="search-result"></div></div></header><article><div id="post-bg"><div id="post-title"><h1>TOP10漏洞</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2023-03-15T02:31:11.000Z" id="date"> 2023-03-15</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2023-03-15T02:38:54.839Z" id="updated"> 2023-03-15</time></div></span></div></div><hr><div id="post-content"><h1 id="TOP10漏洞"><a href="#TOP10漏洞" class="headerlink" title="TOP10漏洞"></a>TOP10漏洞</h1><h2 id="1-SQL注入"><a href="#1-SQL注入" class="headerlink" title="1.SQL注入"></a>1.SQL注入</h2><p>原理：产生SQL注入漏洞的根本原因在于代码中没有对用户输入项进行验证和处理便直接拼接到查询语句中。利用SQL注入漏洞，攻击者可以在应用的查询语句中插入自己的SQL代码并传递给后台SQL服务器时加以解析并执行。</p>
+<p>分类：</p>
+<p>1.显注</p>
+<p>2.盲注（无回显）： 时间型、布尔型、报错型</p>
+<p>危害：</p>
+<p>1.数据库信息泄露</p>
+<p>2.网页篡改</p>
+<p>3.网站被挂马，传播恶意软件</p>
+<p>4.数据库被恶意操作</p>
+<p>5.服务器被植入后门</p>
+<p>6.破坏硬盘或者服务器等硬件设备</p>
+<p>如何进行SQL注入的防御</p>
+<p>1.关闭应用的错误提示</p>
+<p>2.加waf</p>
+<p>3.对输入进行过滤</p>
+<p>4.限制输入长度</p>
+<p>5.限制好数据库权限，drop&#x2F;create&#x2F;truncate等权限谨慎grant</p>
+<p>6.预编译好sql语句，python和Php中一般使用?作为占位符。这种方法是从编程框架方面解决利用占位符参数的sql注入，只能说一定程度上防止注入。还有缓存溢出、终止字符等。</p>
+<p>7.数据库信息加密安全（引导到密码学方面）。不采用md5因为有彩虹表，一般是一次md5后加盐再md5</p>
+<p>8.清晰的编程规范，结对&#x2F;自动化代码review，加大量现成的解决方案（PreparedStatement，ActiveRecord，歧义字符过滤， 只可访问存储过程balabala）已经让SQL注入的风险变得非常低了。</p>
+<p>绕过技术：</p>
+<p>1，关键字可以用%（只限 IIS 系列）。比如 select，可以 sel%e%ct</p>
+<p>2，通杀的，内联注释，如 &#x2F;<em>!select</em>&#x2F;</p>
+<p>3，编码，可两次编码</p>
+<p>4，multipart 请求绕过，在 POST 请求中添加一个上传文件，绕过了绝大多数 WAF</p>
+<p>5，参数绕过，复制参数，id&#x3D;1&amp;id&#x3D;1</p>
+<p>6，组合法 如 and 可以用&amp;&amp;再 URL 编码</p>
+<p>7、替换法，如 and 改成&amp;&amp;;&#x3D;可以用 like 或 in 等</p>
+<h2 id="2-失效的身份认证和会话管理"><a href="#2-失效的身份认证和会话管理" class="headerlink" title="2.失效的身份认证和会话管理"></a>2.失效的身份认证和会话管理</h2><h2 id="3-跨站脚本攻击XSS"><a href="#3-跨站脚本攻击XSS" class="headerlink" title="3.跨站脚本攻击XSS"></a>3.跨站脚本攻击XSS</h2><h2 id="4-直接引用不安全的对象"><a href="#4-直接引用不安全的对象" class="headerlink" title="4.直接引用不安全的对象"></a>4.直接引用不安全的对象</h2><h2 id="5-安全配置错误"><a href="#5-安全配置错误" class="headerlink" title="5.安全配置错误"></a>5.安全配置错误</h2><h2 id="6-敏感信息泄露"><a href="#6-敏感信息泄露" class="headerlink" title="6.敏感信息泄露"></a>6.敏感信息泄露</h2><h2 id="7-缺少功能级的访问控制"><a href="#7-缺少功能级的访问控制" class="headerlink" title="7.缺少功能级的访问控制"></a>7.缺少功能级的访问控制</h2><h2 id="8-跨站请求伪造CSRF"><a href="#8-跨站请求伪造CSRF" class="headerlink" title="8.跨站请求伪造CSRF"></a>8.跨站请求伪造CSRF</h2><p>原理：CSRF跨站点请求伪造。攻击者盗用了受害者的身份，以受害者的名义发送恶意请求，对</p>
+<p>服务器来说这个请求是完全合法的，但是却完成了攻击者所期望的一个操作</p>
+<p>危害：</p>
+<p>1、对网站管理员进行攻击</p>
+<p>2、修改受害网站上的用户账户和数据</p>
+<p>3、账户劫持</p>
+<p>4、传播CSRF蠕虫进行大规模攻击</p>
+<p>5、利用csrf进行拖库</p>
+<p>6、利用其他漏洞进行组合拳攻击</p>
+<p>7、针对路由器的csrf攻击</p>
+<p>如何防护：</p>
+<p>尽量使用POST，限制GET；</p>
+<p>浏览器Cookie策略；</p>
+<p>加验证码；</p>
+<p>Referer Check；</p>
+<p>Anti CSRF Token</p>
+<h2 id="9-实验含有已知漏洞的组件"><a href="#9-实验含有已知漏洞的组件" class="headerlink" title="9.实验含有已知漏洞的组件"></a>9.实验含有已知漏洞的组件</h2><h2 id="10-未验证的重定向和转发"><a href="#10-未验证的重定向和转发" class="headerlink" title="10.未验证的重定向和转发"></a>10.未验证的重定向和转发</h2><div id="paginator"></div></div><div id="post-footer"><div id="pages" style="justify-content: flex-end"><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2023/03/14/%E5%B8%B8%E7%94%A8%E7%9A%84100%E4%B8%AACMD%E6%8C%87%E4%BB%A4/">常用的100个CMD指令 Prev →</a></div></div></div></div><div id="bottom-btn"><a id="to-index" href="#toc-div" title="文章目录">≡</a><a id="to-top" onClick="scrolls.scrolltop();" title="to top" style="opacity: 0; display: none;">∧</a></div></article><aside><div id="aside-top"><div id="about"><a href="/" id="logo"><img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="Logo"></a><h1 id="Dr"><a href="/">Kiber</a></h1><div id="description"><p></p></div></div><div id="aside-block"><div id="toc-div"><h1>文章目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#TOP10%E6%BC%8F%E6%B4%9E"><span class="toc-number">1.</span> <span class="toc-text">TOP10漏洞</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-SQL%E6%B3%A8%E5%85%A5"><span class="toc-number">1.1.</span> <span class="toc-text">1.SQL注入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%A4%B1%E6%95%88%E7%9A%84%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E5%92%8C%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86"><span class="toc-number">1.2.</span> <span class="toc-text">2.失效的身份认证和会话管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E8%B7%A8%E7%AB%99%E8%84%9A%E6%9C%AC%E6%94%BB%E5%87%BBXSS"><span class="toc-number">1.3.</span> <span class="toc-text">3.跨站脚本攻击XSS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E7%9B%B4%E6%8E%A5%E5%BC%95%E7%94%A8%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.4.</span> <span class="toc-text">4.直接引用不安全的对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE%E9%94%99%E8%AF%AF"><span class="toc-number">1.5.</span> <span class="toc-text">5.安全配置错误</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2"><span class="toc-number">1.6.</span> <span class="toc-text">6.敏感信息泄露</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E7%BC%BA%E5%B0%91%E5%8A%9F%E8%83%BD%E7%BA%A7%E7%9A%84%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6"><span class="toc-number">1.7.</span> <span class="toc-text">7.缺少功能级的访问控制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E8%B7%A8%E7%AB%99%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0CSRF"><span class="toc-number">1.8.</span> <span class="toc-text">8.跨站请求伪造CSRF</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E5%AE%9E%E9%AA%8C%E5%90%AB%E6%9C%89%E5%B7%B2%E7%9F%A5%E6%BC%8F%E6%B4%9E%E7%9A%84%E7%BB%84%E4%BB%B6"><span class="toc-number">1.9.</span> <span class="toc-text">9.实验含有已知漏洞的组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-%E6%9C%AA%E9%AA%8C%E8%AF%81%E7%9A%84%E9%87%8D%E5%AE%9A%E5%90%91%E5%92%8C%E8%BD%AC%E5%8F%91"><span class="toc-number">1.10.</span> <span class="toc-text">10.未验证的重定向和转发</span></a></li></ol></li></ol></div></div></div><footer><nobr>构建自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr>主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script class="pjax-js">reset=_=>{code.findCode();mermaid.init(undefined, ('.mermaid'));}</script><script src="/js/arknights.js"></script><script>window.addEventListener("load",()=>{reset()})</script></body></html>
